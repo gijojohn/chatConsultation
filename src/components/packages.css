@@ -1,0 +1,93 @@
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.package-card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.package-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.package-description {
+  color: #4B5563;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.package-price {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.5rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.package-duration {
+  color: #4B5563;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.package-button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #4361ee;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+.package-button:hover {
+  background-color: #3730a3;
+}
+
+@media (max-width: 1024px) {
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .package-card {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 2rem;
+  }
+
+  .package-card:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
