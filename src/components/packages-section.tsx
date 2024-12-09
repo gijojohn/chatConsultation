@@ -6,14 +6,14 @@ import React from 'react';
 const PACKAGES = [
   {
     id: 1,
-    title: 'Basic Consultation1',
+    title: 'Basic Consultation',
     description: 'Perfect for quick questions and brief consultations',
     price: 499,
     duration: '30 Minutes',
   },
   {
     id: 2,
-    title: 'Standard Consultation2',
+    title: 'Standard Consultation',
     description: 'Ideal for in-depth discussions and detailed advice',
     price: 899,
     duration: '60 Minutes',
