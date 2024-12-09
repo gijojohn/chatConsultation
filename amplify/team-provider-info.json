@@ -1,23 +1,15 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-chatconsultation-dev-3b5ae-authRole",
-      "UnauthRoleArn": "arn:aws:iam::779846820457:role/amplify-chatconsultation-dev-3b5ae-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::779846820457:role/amplify-chatconsultation-dev-3b5ae-authRole",
+      "AuthRoleName": "amplify-chatconsultation-dev-db133-authRole",
+      "UnauthRoleArn": "arn:aws:iam::779846820457:role/amplify-chatconsultation-dev-db133-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::779846820457:role/amplify-chatconsultation-dev-db133-authRole",
       "Region": "ap-south-1",
-      "DeploymentBucketName": "amplify-chatconsultation-dev-3b5ae-deployment",
-      "UnauthRoleName": "amplify-chatconsultation-dev-3b5ae-unauthRole",
-      "StackName": "amplify-chatconsultation-dev-3b5ae",
-      "StackId": "arn:aws:cloudformation:ap-south-1:779846820457:stack/amplify-chatconsultation-dev-3b5ae/98fd8400-b57f-11ef-b592-02bfd55cf31f",
-      "AmplifyAppId": "d285odeea4vdwe"
-    },
-    "categories": {
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "d285odeea4vdwe",
-          "type": "manual"
-        }
-      }
+      "DeploymentBucketName": "amplify-chatconsultation-dev-db133-deployment",
+      "UnauthRoleName": "amplify-chatconsultation-dev-db133-unauthRole",
+      "StackName": "amplify-chatconsultation-dev-db133",
+      "StackId": "arn:aws:cloudformation:ap-south-1:779846820457:stack/amplify-chatconsultation-dev-db133/8fe0b4e0-b64d-11ef-bd17-021a43c68d3f",
+      "AmplifyAppId": "dia9l4afzs6mp"
     }
   }
 }
