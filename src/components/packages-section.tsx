@@ -46,7 +46,7 @@ export function PackagesSection() {
           <div
             key={pkg.id}
             className={`package-card text-center ${
-              index < PACKAGES.length - 1 ? 'border-b pb-6 mb-6' : ''
+              index < PACKAGES.length - 1 ? 'border-b pb-6 mb-12 md:mb-6' : ''
             }`}
           >
             <h3 className="package-title text-center">{pkg.title}</h3>
