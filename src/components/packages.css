@@ -77,28 +77,31 @@
 @media (max-width: 640px) {
   .packages-grid {
     grid-template-columns: 1fr;
-    gap: 0;  /* Increased gap for mobile */
+    gap: 2rem;
     padding: 1rem;
   }
 
   .package-card {
-    margin-bottom: 2rem;  /* Add space between cards */
+    margin: 0;  /* Reset margin */
     padding: 2rem;
     border-radius: 0.75rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background: white;
-    min-height: auto;       /* Add this */
-    height: auto;           /* Add this */
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
-  /* Add a light background between cards */
+  /* Remove specific first-child styling if any exists */
+  .package-card:first-child {
+    margin-top: 0;
+    padding-top: 2rem;  /* Make consistent with other cards */
+  }
+
+  /* Add consistent spacing between cards */
   .package-card + .package-card {
     margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1rem solid #f3f4f6;  /* Light gray separator */
   }
 
     /* Ensure button is always visible */
