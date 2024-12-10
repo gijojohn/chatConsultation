@@ -6,7 +6,7 @@ import React from 'react';
 const PACKAGES = [
   {
     id: 1,
-    title: 'Basic Consultation',
+    title: 'Basic Consultation1a',
     description: 'Perfect for quick questions and brief consultations',
     price: 499,
     duration: '30 Minutes',
@@ -41,13 +41,11 @@ export function PackagesSection() {
         </p>
       </div>
       
-      <div className="packages-grid">
+      <div className="packages-grid gap-8">
         {PACKAGES.map((pkg, index) => (
           <div
             key={pkg.id}
-            className={`package-card text-center ${
-              index < PACKAGES.length - 1 ? 'border-b pb-6 mb-12 md:mb-6' : ''
-            }`}
+            className="package-card text-center bg-white rounded-lg shadow-lg p-6 mb-8 md:mb-0"
           >
             <h3 className="package-title text-center">{pkg.title}</h3>
             <p className="package-description text-center">{pkg.description}</p>
