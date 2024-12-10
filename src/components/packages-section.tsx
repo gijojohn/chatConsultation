@@ -6,7 +6,7 @@ import React from 'react';
 const PACKAGES = [
   {
     id: 1,
-    title: 'Basic Consultation',
+    title: 'Basic Consultation1',
     description: 'Perfect for quick questions and brief consultations',
     price: 499,
     duration: '30 Minutes',
