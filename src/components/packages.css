@@ -77,22 +77,22 @@
 @media (max-width: 640px) {
   .packages-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;  /* Increased gap for mobile */
-    padding: 0 1rem;
+    gap: 0;  /* Increased gap for mobile */
+    padding: 1rem;
   }
 
   .package-card {
-    margin: 0;  /* Reset margin */
+    margin-bottom: 2rem;  /* Add space between cards */
     padding: 2rem;
-    position: relative;  /* For shadow depth */
-    transform: translateZ(0);  /* Force card onto new layer */
-    background: white;
+    border-radius: 0.75rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: white;
   }
 
-  /* Remove any last-child special styling */
-  .package-card:last-child {
-    margin: 0;
-    padding: 2rem;
+  /* Add a light background between cards */
+  .package-card + .package-card {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1rem solid #f3f4f6;  /* Light gray separator */
   }
 }

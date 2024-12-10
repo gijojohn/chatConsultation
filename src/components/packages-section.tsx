@@ -20,7 +20,7 @@ const PACKAGES = [
   },
   {
     id: 3,
-    title: 'Extended Consultation',
+    title: 'Extended Consultation3c',
     description: 'Comprehensive consultation for complex matters',
     price: 1599,
     duration: '120 Minutes',
