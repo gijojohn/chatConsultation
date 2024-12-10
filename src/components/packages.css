@@ -77,17 +77,22 @@
 @media (max-width: 640px) {
   .packages-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;  /* Increased gap for mobile */
     padding: 0 1rem;
   }
 
   .package-card {
-    margin-bottom: 0;
-    padding-bottom: 2rem;
+    margin: 0;  /* Reset margin */
+    padding: 2rem;
+    position: relative;  /* For shadow depth */
+    transform: translateZ(0);  /* Force card onto new layer */
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
+  /* Remove any last-child special styling */
   .package-card:last-child {
-    margin-bottom: 0;
-    padding-bottom: 2rem;
+    margin: 0;
+    padding: 2rem;
   }
 }
