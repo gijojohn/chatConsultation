@@ -53,16 +53,16 @@ export default function ConsentForm({
         onClick={onClose}
       >
         <div
-          className="bg-white rounded-lg shadow-xl w-full max-w-md mx-4"
+          className="relative bg-white rounded-lg shadow-xl w-full max-w-md mx-4 my-8"
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="sm:max-w-[500px] max-h-[80vh] overflow-y-auto">
-            <div className="px-6 py-4 border-b sticky top-0 z-10">
+          <div className="max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <div className="px-6 py-4 border-b">
               <h2 className="text-lg font-semibold">Consent Form</h2>
             </div>
-            <div className="px-6 py-4 space-y-4">
+            <div className="px-6 py-4 space-y-6">
               {selectedPackage && (
-                <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+                <div className="p-4 bg-gray-50 rounded-lg">
                   <h4 className="font-medium mb-2">Selected Package:</h4>
                   <p className="font-medium text-lg">{selectedPackage.title}</p>
                   <p className="text-gray-600">Duration: {selectedPackage.duration}</p>
@@ -86,20 +86,21 @@ export default function ConsentForm({
                     'I understand that chat records will be maintained securely for quality and record purposes.',
                 },
               ].map(({ id, label }) => (
-                <div className="flex items-start space-x-3" key={id}>
+                <div className="flex items-start gap-4" key={id}>
                   <Checkbox
                     id={id}
+                    className="mt-1"
                     checked={consents[id as keyof typeof consents]}
                     onCheckedChange={() => handleConsentChange(id as keyof typeof consents)}
                   />
-                  <label htmlFor={id} className="text-sm leading-tight">
+                  <label htmlFor={id} className="text-sm leading-relaxed flex-1">
                     {label}
                   </label>
                 </div>
               ))}
             </div>
-            <div className="bg-white px-6 py-4 border-t sticky bottom-0">
-              <div className="flex justify-end space-x-3 w-full">
+            <div className="px-6 py-4 border-t bg-white">
+              <div className="flex justify-end gap-3">
                 <Button variant="outline" onClick={onClose}>
                   Cancel
                 </Button>
