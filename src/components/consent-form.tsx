@@ -39,10 +39,10 @@ export default function ConsentForm({ isOpen, onClose, onSubmit, selectedPackage
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[500px]">
-        <div className="max-h-[80vh] overflow-y-auto">
-          <DialogHeader className="bg-white px-6 py-4 border-b sticky top-0 z-10">
-            <DialogTitle className="text-2xl font-bold">Consent Form</DialogTitle>
+      <DialogContent>
+        <div className="sm:max-w-[500px] max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Consent Form</DialogTitle>
           </DialogHeader>
           <div className="px-6 py-4 space-y-4">
             {selectedPackage && (

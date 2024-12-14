@@ -14,7 +14,7 @@ const PACKAGES = [
   },
   {
     id: 2,
-    title: 'Standard Consultation2',
+    title: 'Standard Consultations',
     description: 'Ideal for in-depth discussions and detailed advice',
     price: 899,
     duration: '60 Minutes',
