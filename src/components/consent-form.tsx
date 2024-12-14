@@ -13,9 +13,16 @@ interface ConsentFormProps {
     price: number;
     duration: string;
   } | null;
+  onProceedToPayment?: () => void;
 }
 
-export default function ConsentForm({ isOpen, onClose, onSubmit, selectedPackage }: ConsentFormProps) {
+export default function ConsentForm({ 
+  isOpen, 
+  onClose, 
+  onSubmit, 
+  selectedPackage,
+  onProceedToPayment 
+}: ConsentFormProps) {
   const [consents, setConsents] = useState<Record<string, boolean>>({
     anonymity: false,
     terms: false,
@@ -32,6 +39,9 @@ export default function ConsentForm({ isOpen, onClose, onSubmit, selectedPackage
   const handleSubmit = () => {
     onSubmit(consents);
     onClose();
+    if (onProceedToPayment) {
+      onProceedToPayment();
+    }
   };
 
   const allConsentsGiven = Object.values(consents).every(Boolean);

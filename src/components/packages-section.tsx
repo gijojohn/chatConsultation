@@ -7,21 +7,21 @@ import ConsentForm from './consent-form';
 const PACKAGES = [
   {
     id: 1,
-    title: 'Basic Consultations1',
+    title: 'Basic Consultations4',
     description: 'Perfect for quick questions and brief consultations',
     price: 499,
     duration: '30 Minutes',
   },
   {
     id: 2,
-    title: 'Standard Consultations2',
+    title: 'Standard Consultations5',
     description: 'Ideal for in-depth discussions and detailed advice',
     price: 899,
     duration: '60 Minutes',
   },
   {
     id: 3,
-    title: 'Extended Consultations',
+    title: 'Extended Consultations3',
     description: 'Comprehensive consultation for complex matters',
     price: 1599,
     duration: '120 Minutes',
@@ -31,6 +31,7 @@ const PACKAGES = [
 export function PackagesSection() {
   const [showConsentForm, setShowConsentForm] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState<typeof PACKAGES[0] | null>(null);
+  const [consents, setConsents] = useState<Record<string, boolean>>({});
 
   const handlePackageSelect = (packageId: number) => {
     const selected = PACKAGES.find(pkg => pkg.id === packageId);
@@ -47,6 +48,11 @@ export function PackagesSection() {
     console.log('Proceeding to payment for package:', selectedPackage);
     // Will add payment integration here later
     handleConsentClose();
+  };
+
+  const handleConsentSubmit = (consents: Record<string, boolean>) => {
+    setConsents(consents);
+    console.log('Consents submitted:', consents);
   };
 
   return (
@@ -83,6 +89,7 @@ export function PackagesSection() {
         onClose={handleConsentClose}
         selectedPackage={selectedPackage}
         onProceedToPayment={handleProceedToPayment}
+        onSubmit={handleConsentSubmit}
       />
     </section>
   );
