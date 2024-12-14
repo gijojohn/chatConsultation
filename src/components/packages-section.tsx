@@ -1,7 +1,8 @@
 'use client';
 
 import './packages.css';
-import React from 'react';
+import React, { useState } from 'react';
+import ConsentForm from './consent-form';
 
 const PACKAGES = [
   {
@@ -20,7 +21,7 @@ const PACKAGES = [
   },
   {
     id: 3,
-    title: 'Extended Consultation',
+    title: 'Extended Consultation3',
     description: 'Comprehensive consultation for complex matters',
     price: 1599,
     duration: '120 Minutes',
@@ -28,8 +29,24 @@ const PACKAGES = [
 ];
 
 export function PackagesSection() {
+  const [showConsentForm, setShowConsentForm] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState<typeof PACKAGES[0] | null>(null);
+
   const handlePackageSelect = (packageId: number) => {
-    console.log(`Selected package: ${packageId}`);
+    const selected = PACKAGES.find(pkg => pkg.id === packageId);
+    setSelectedPackage(selected || null);
+    setShowConsentForm(true);
+  };
+
+  const handleConsentClose = () => {
+    setShowConsentForm(false);
+    setSelectedPackage(null);
+  };
+
+  const handleProceedToPayment = () => {
+    console.log('Proceeding to payment for package:', selectedPackage);
+    // Will add payment integration here later
+    handleConsentClose();
   };
 
   return (
@@ -60,6 +77,13 @@ export function PackagesSection() {
           </div>
         ))}
       </div>
+
+      <ConsentForm
+        isOpen={showConsentForm}
+        onClose={handleConsentClose}
+        selectedPackage={selectedPackage}
+        onProceedToPayment={handleProceedToPayment}
+      />
     </section>
   );
 }
