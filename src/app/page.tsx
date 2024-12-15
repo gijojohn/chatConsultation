@@ -6,8 +6,8 @@ const Navigation = () => {
   return (
     <nav className="w-full bg-white shadow-sm mb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          <div className="text-xl font-semibold text-blue-600">
+        <div className="flex justify-between md:justify-center relative h-16 items-center">
+          <div className="text-xl font-semibold text-blue-600 md:absolute md:left-0">
             TalkItOut
           </div>
           
@@ -46,7 +46,7 @@ const App = () => {
             and aim to break down barriers by offering a confidential space for open conversations. 
             Let&apos;s lighten your emotional load together!
           </p>
-	  <Link href="/packages">	
+          <Link href="/packages">	
           <button className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
             <MessageCircle className="mr-2 h-5 w-5" />
             Chat Now
