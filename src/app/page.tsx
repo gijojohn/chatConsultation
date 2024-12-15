@@ -5,26 +5,29 @@ const Navigation = () => {
   return (
     <nav className="w-full bg-white shadow-sm mb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-16 relative">
-          {/* Logo - absolute positioned on desktop */}
-          <div className="text-xl font-semibold text-blue-600 md:absolute md:left-0">
+        {/* Main flex container */}
+        <div className="flex items-center h-16 relative w-full">
+          {/* Logo */}
+          <div className="text-xl font-semibold text-blue-600 flex-none md:absolute md:left-0">
             TalkItOut
           </div>
           
-          {/* Navigation - full width container to enable center alignment */}
-          <div className="flex justify-end md:justify-center md:w-full space-x-8">
-            <button className="px-4 py-2 rounded bg-gray-900 text-white">
-              Home
-            </button>
-            <button className="px-3 py-2 text-gray-600 hover:text-gray-900">
-              About Us
-            </button>
-            <button className="px-3 py-2 text-gray-600 hover:text-gray-900">
-              Why TalkItOut
-            </button>
-            <button className="px-3 py-2 text-gray-600 hover:text-gray-900">
-              Contact Us
-            </button>
+          {/* Navigation container */}
+          <div className="flex flex-1 justify-end md:justify-center items-center w-full">
+            <div className="inline-flex space-x-8">
+              <button className="px-4 py-2 rounded bg-gray-900 text-white">
+                Home
+              </button>
+              <button className="px-3 py-2 text-gray-600 hover:text-gray-900">
+                About Us
+              </button>
+              <button className="px-3 py-2 text-gray-600 hover:text-gray-900">
+                Why TalkItOut
+              </button>
+              <button className="px-3 py-2 text-gray-600 hover:text-gray-900">
+                Contact Us
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -33,6 +36,7 @@ const Navigation = () => {
 }
 
 const App = () => {
+  // Rest of the App component remains exactly the same
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
