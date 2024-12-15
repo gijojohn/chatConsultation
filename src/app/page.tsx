@@ -5,12 +5,14 @@ const Navigation = () => {
   return (
     <nav className="w-full bg-white shadow-sm mb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 h-16 items-center">
-          <div className="text-xl font-semibold text-blue-600 col-span-1">
+        <div className="flex items-center h-16 relative">
+          {/* Logo - absolute positioned on desktop */}
+          <div className="text-xl font-semibold text-blue-600 md:absolute md:left-0">
             TalkItOut
           </div>
           
-          <div className="flex justify-end md:justify-center space-x-8 col-span-2 md:col-span-1">
+          {/* Navigation - full width container to enable center alignment */}
+          <div className="flex justify-end md:justify-center md:w-full space-x-8">
             <button className="px-4 py-2 rounded bg-gray-900 text-white">
               Home
             </button>
@@ -24,7 +26,6 @@ const Navigation = () => {
               Contact Us
             </button>
           </div>
-          <div className="hidden md:block"></div>
         </div>
       </div>
     </nav>
