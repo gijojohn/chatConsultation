@@ -5,12 +5,12 @@ const Navigation = () => {
   return (
     <nav className="w-full bg-white shadow-sm mb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="h-16 block md:grid md:grid-cols-3 items-center">
+        <div className="h-16 flex items-center">
           <div className="text-xl font-semibold text-blue-600">
             TalkItOut
           </div>
           
-          <div className="text-right md:text-center">
+          <div className="w-full text-right md:text-center">
             <button className="px-4 py-2 rounded bg-gray-900 text-white">
               Home
             </button>
@@ -24,14 +24,11 @@ const Navigation = () => {
               Contact Us
             </button>
           </div>
-          
-          <div></div>
         </div>
       </div>
     </nav>
   )
 }
-
 const App = () => {
   // Rest of the App component remains exactly the same
   return (
