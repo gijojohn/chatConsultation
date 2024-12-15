@@ -5,25 +5,27 @@ const Navigation = () => {
   return (
     <nav className="w-full bg-white shadow-sm mb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="h-16 flex items-center">
+        <div className="h-16 block md:grid md:grid-cols-3 items-center">
           <div className="text-xl font-semibold text-blue-600">
             TalkItOut
           </div>
           
-          <div className="w-full text-right md:text-center">
-            <button className="px-4 py-2 rounded bg-gray-900 text-white">
+          <div className="text-right md:text-center">
+            <button className="inline-block px-4 py-2 rounded bg-gray-900 text-white">
               Home
             </button>
-            <button className="ml-8 px-3 py-2 text-gray-600 hover:text-gray-900">
+            <button className="inline-block ml-8 px-3 py-2 text-gray-600 hover:text-gray-900">
               About Us
             </button>
-            <button className="ml-8 px-3 py-2 text-gray-600 hover:text-gray-900">
+            <button className="inline-block ml-8 px-3 py-2 text-gray-600 hover:text-gray-900">
               Why TalkItOut
             </button>
-            <button className="ml-8 px-3 py-2 text-gray-600 hover:text-gray-900">
+            <button className="inline-block ml-8 px-3 py-2 text-gray-600 hover:text-gray-900">
               Contact Us
             </button>
           </div>
+          
+          <div className="hidden md:block"></div>
         </div>
       </div>
     </nav>
