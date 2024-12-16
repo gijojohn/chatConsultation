@@ -1,0 +1,21 @@
+/* Reset root level styles while preserving Tailwind variables */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+}
+
+/* Target Amplify classes specifically */
+[class*="amplify-"] {
+  font: inherit !important;
+  color: inherit !important;
+  background: inherit !important;
+  margin: inherit !important;
+  padding: inherit !important;
+  border: inherit !important;
+}
+
+/* Ensure body styles */
+body {
+  min-height: 100vh;
+  width: 100%;
+}
