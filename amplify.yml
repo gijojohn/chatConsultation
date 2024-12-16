@@ -8,18 +8,9 @@ frontend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: .next
+    baseDirectory: out    # Changed from .next to out
     files:
       - '**/*'
-    # Add this discard patterns section to ensure no temp files are included
-    discard-paths: no
-    # This ensures the static CSS is included
-    secondary-artifacts:
-      static:
-        files:
-          - '**/*'
-        base-directory: .next/static
   cache:
     paths:
       - node_modules/**/*
-      - .next/cache/**/*
