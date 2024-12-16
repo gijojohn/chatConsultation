@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // This forces static HTML export
+  output: 'standalone',
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
+  // Remove experimental section since serverActions is now default
 }
 
 module.exports = nextConfig

@@ -8,9 +8,12 @@ frontend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: out    # Changed from .next to out
+    baseDirectory: .next  # Changed back to .next
     files:
       - '**/*'
+      - ../public/**/*  # Include public files
+    discard-paths: false
   cache:
     paths:
       - node_modules/**/*
+      - .next/cache/**/*
